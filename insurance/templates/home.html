@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="text-center text-white py-5" 
+         style="background: linear-gradient(135deg, #007bff, #0056b3);">
+  <div class="container">
+    <h1 class="fw-bold mb-3">Compare. Choose. Secure Your Future.</h1>
+    <p class="lead mb-4">Health, Life, Car & Travel Insurance from trusted providers.</p>
+    <a href="#" class="btn btn-light btn-lg fw-bold">Get Free Quote</a>
+  </div>
+</section>
+
+<!-- Insurance Categories -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4 text-center">
+
+      <div class="col-md-3">
+        <div class="card shadow-sm border-0 p-3 h-100">
+          <i class="bi bi-heart-pulse-fill text-danger fs-1"></i>
+          <h5 class="mt-3">Health Insurance</h5>
+          <p class="text-muted">Protect yourself & family from medical expenses.</p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card shadow-sm border-0 p-3 h-100">
+          <i class="bi bi-person-badge-fill text-primary fs-1"></i>
+          <h5 class="mt-3">Life Insurance</h5>
+          <p class="text-muted">Ensure financial stability for loved ones.</p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card shadow-sm border-0 p-3 h-100">
+          <i class="bi bi-car-front-fill text-success fs-1"></i>
+          <h5 class="mt-3">Vehicle Insurance</h5>
+          <p class="text-muted">Drive stress-free with comprehensive protection.</p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card shadow-sm border-0 p-3 h-100">
+          <i class="bi bi-airplane-fill text-warning fs-1"></i>
+          <h5 class="mt-3">Travel Insurance</h5>
+          <p class="text-muted">Travel safe with worldwide coverage plans.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}

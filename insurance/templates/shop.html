@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #e0f7e9, #ffffff);
+    margin: 0;
+    padding: 0;
+  }
+
+  .shop-section {
+    padding: 60px 20px;
+  }
+
+  .section-title {
+    font-size: 2.75rem;
+    color: #2e7d32;
+    font-weight: 700;
+  }
+
+  .section-subtext {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: auto;
+  }
+
+  .shop-card {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    height: 100%;
+  }
+
+  .shop-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 128, 0, 0.1);
+  }
+
+  .shop-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .shop-content {
+    padding: 20px;
+    text-align: left;
+  }
+
+  .shop-name {
+    font-size: 1.3rem;
+    color: #1b5e20;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .shop-description {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .shop-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 18px;
+    background-color: #2e7d32;
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease;
+  }
+
+  .shop-btn:hover {
+    background-color: #1b5e20;
+  }
+</style>
+{% endblock style %}
+
+{% block content %}
+<section class="shop-section text-center">
+  <div class="container">
+    <h2 class="section-title mb-4">🌿 Explore Plant Shops</h2>
+    <p class="section-subtext mb-5">
+      Find trusted nurseries offering beautiful plants and garden accessories tailored for every space—from balconies to backyards.
+    </p>
+
+    <div class="row g-4">
+      <!-- Shop 1 -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="shop-card">
+          <img src="{% static 'images/shop.jpg' %}" alt="Shop Image" class="shop-img">
+          <div class="shop-content">
+            <h5 class="shop-name">Green Root Garden</h5>
+            <p class="shop-description">
+              Wide selection of indoor plants and succulents. Perfect for homes and offices.
+            </p>
+            <a href="/plants" class="shop-btn">Browse Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Shop 2 -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="shop-card">
+          <img src="{% static 'images/shop1.jpg' %}" alt="Shop Image" class="shop-img">
+          <div class="shop-content">
+            <h5 class="shop-name">Shakthi Nursery</h5>
+            <p class="shop-description">
+              Seasonal flowers and garden décor. Ideal for balconies and patios.
+            </p>
+            <a href="/plants2" class="shop-btn">Browse Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
