@@ -1,27 +1,98 @@
 {% extends 'base.html' %}
 {% load static %}
+
 {% block content %}
-  <section id="about" class="about-section">
-            <div class="about-content">
-                <h2>About Blossom Emporium</h2>
-                <p> Blossom Emporium has been your trusted partner in creating beautiful gardens. We specialize in high-quality plants, expert advice, and sustainable gardening practices.</p>
-                <div class="features">
-                    <div class="feature">
-                        <i class="fas fa-leaf"></i>
-                        <h3>Quality Plants</h3>
-                        <p>Hand-selected, healthy plants from trusted growers</p>
-                    </div>
-                    <!-- <div class="feature">
-                        <i class="fas fa-users"></i>
-                        <h3>Expert Advice</h3>
-                        <p>Professional guidance for all your gardening needs</p>
-                    </div> -->
-                    <div class="feature">
-                        <i class="fas fa-recycle"></i>
-                        <h3>Eco-Friendly</h3>
-                        <p>Sustainable practices and organic options</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+
+<section class="text-white text-center py-5" 
+         style="background: linear-gradient(135deg, #0d47a1, #1976d2);">
+  <div class="container">
+    <h1 class="fw-bold">About Us</h1>
+    <p class="lead">Trusted Insurance Solutions for Every Stage of Life</p>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-6">
+        <img src="{% static 'images/img2.png' %}" 
+             class="img-fluid rounded shadow" alt="About Insurance">
+      </div>
+      <div class="col-lg-6">
+        <h2 class="fw-bold text-primary mb-3">Who We Are</h2>
+        <p>
+          At <strong>WIN SURE Consulting</strong>, we are committed to providing 
+          reliable, affordable, and personalized insurance solutions. 
+          With years of expertise, we help individuals and families 
+          secure their future with the right protection — whether it’s 
+          health, life, vehicle, or travel insurance.
+        </p>
+        <p>
+          Our mission is to simplify insurance by making policies easy to 
+          understand, compare, and choose. We believe insurance is not 
+          just about policies — it’s about peace of mind and building trust.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="fw-bold text-primary mb-4">Why Choose Us?</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card border-0 shadow h-100 p-4">
+          <i class="bi bi-shield-check text-primary fs-1 mb-3"></i>
+          <h5 class="fw-bold">Trusted Protection</h5>
+          <p>Reliable policies from top providers, tailored for your needs.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card border-0 shadow h-100 p-4">
+          <i class="bi bi-cash-stack text-success fs-1 mb-3"></i>
+          <h5 class="fw-bold">Affordable Plans</h5>
+          <p>Compare multiple options and save more with transparent pricing.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card border-0 shadow h-100 p-4">
+          <i class="bi bi-people-fill text-warning fs-1 mb-3"></i>
+          <h5 class="fw-bold">Customer First</h5>
+          <p>Dedicated support team to guide you at every step.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container text-center">
+    <h2 class="fw-bold text-primary mb-4">Our Mission & Vision</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="p-4 border rounded shadow-sm h-100">
+          <h5 class="fw-bold text-success">Our Mission</h5>
+          <p>To make insurance simple, accessible, and beneficial for every individual and family by offering transparent comparisons and expert guidance.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="p-4 border rounded shadow-sm h-100">
+          <h5 class="fw-bold text-info">Our Vision</h5>
+          <p>To become the most trusted insurance consulting partner in India, helping millions secure their future with confidence.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 text-white text-center" 
+         style="background: linear-gradient(135deg, #1565c0, #0d47a1);">
+  <div class="container">
+    <h2 class="fw-bold">Secure Your Future Today!</h2>
+    <p class="lead">Compare. Choose. Save. Get the best insurance plan now.</p>
+    <a href="{% url 'register' %}" class="btn btn-warning btn-lg mt-3">Get Your Free Quote</a>
+  </div>
+</section>
+
 {% endblock %}

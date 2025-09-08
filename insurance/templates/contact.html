@@ -1,21 +1,70 @@
 {% extends 'base.html' %}
 {% load static %}
+
 {% block content %}
-       <section id="contact" class="contact-section">
-            <h2>Visit Our Blossom Emporium</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>123, Chengalpattu, TamilNadu</p>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <p>+91 7094223138</p>
-                </div>
-                <div class="contact-item">
-                   <i class="fas fa-envelope"></i>
-                    <p>blossomemporium2025@gmail.com</p>
-                </div>
+
+<section class="text-white text-center py-5" 
+         style="background: linear-gradient(135deg, #0d47a1, #1976d2);">
+  <div class="container">
+    <h1 class="fw-bold">Contact Us</h1>
+    <p class="lead">We’re here to help you with the right insurance solutions</p>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+
+      <div class="col-lg-6">
+        <div class="card shadow border-0 p-4">
+          <h3 class="fw-bold mb-4 text-primary">Send Us a Message</h3>
+          <form method="post" action="{% url 'contact' %}">
+            {% csrf_token %}
+            
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Your Name</label>
+              <input type="text" name="name" class="form-control" placeholder="Enter your full name" required>
             </div>
-        </section>
+
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Email Address</label>
+              <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Phone Number</label>
+              <input type="tel" name="phone" class="form-control" placeholder="Enter your phone number" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Message</label>
+              <textarea name="message" rows="4" class="form-control" placeholder="How can we help you?" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <h3 class="fw-bold text-primary mb-4">Get in Touch</h3>
+        <p class="mb-3"><i class="bi bi-telephone-fill text-primary"></i> 
+          <strong>7402399990</strong></p>
+        <p class="mb-3"><i class="bi bi-envelope-fill text-primary"></i> 
+          sathishkumarrajd@yahoo.com<br>sathish@winsureconsulting.com</p>
+        <p class="mb-4"><i class="bi bi-geo-alt-fill text-danger"></i> 
+          69/30, Rajendra Singh Street, Sunnambupet, Gudiyattam – 632602</p>
+
+        <div class="ratio ratio-16x9 shadow rounded">
+          <iframe 
+            src="https://www.google.com/maps?q=Gudiyattam,+Tamil+Nadu&output=embed" 
+            width="100%" height="300" style="border:0;" allowfullscreen="" 
+            loading="lazy"></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 {% endblock %}

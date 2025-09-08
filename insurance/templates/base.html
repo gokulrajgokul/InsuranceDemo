@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SecureLife Insurance</title>
+  <title>WI N SURE Consulting</title>
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <link rel="icon" href="{% static 'images/insurance-icon.png' %}" type="image/png" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -20,8 +20,8 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
     <div class="container">
-      <a class="navbar-brand fw-bold text-primary d-flex align-items-center" href="{% url 'home' %}">
-        <i class="bi bi-shield-check me-2"></i> SecureLife
+      <a class="navbar-brand fw-bold text-primary d-flex align-items-center text-white" href="{% url 'home' %}">
+        <i class="bi bi-shield-check me-2"></i> WI N SURE Consulting
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
               data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
@@ -30,15 +30,15 @@
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link fw-medium" href="{% url 'home' %}">Home</a></li>
-          <li class="nav-item"><a class="nav-link fw-medium" href="{% url 'about' %}">About</a></li>
-          <li class="nav-item"><a class="nav-link fw-medium" href="{% url 'contact' %}">Contact</a></li>
+          <li class="nav-item"><a class="nav-link fw-medium text-white" href="{% url 'home' %}">Home</a></li>
+          <li class="nav-item"><a class="nav-link fw-medium text-white" href="{% url 'about' %}">About</a></li>
+          <li class="nav-item"><a class="nav-link fw-medium text-white" href="{% url 'contact' %}">Contact</a></li>
 
           {% if user.is_authenticated %}
-          <li class="nav-item"><a class="nav-link fw-medium" href="{% url 'plans' %}">Plans</a></li>
+          <li class="nav-item"><a class="nav-link fw-medium" href="#">Plans</a></li>
           <li class="nav-item"><a class="btn btn-outline-danger btn-sm ms-2" href="{% url 'signout' %}">Logout</a></li>
           {% else %}
-          <li class="nav-item"><a class="nav-link fw-medium" href="{% url 'register' %}">Register</a></li>
+          <li class="nav-item"><a class="nav-link fw-medium text-white" href="{% url 'register' %}">Register</a></li>
           <li class="nav-item"><a class="btn btn-primary btn-sm ms-2" href="{% url 'signin' %}">Login</a></li>
           {% endif %}
         </ul>
