@@ -1,0 +1,206 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+  body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background: #004080;
+  color: white;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.service-card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  position: relative;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card img {
+  width: 60px;
+  height: 60px;
+  margin: 10px 0;
+}
+
+.service-card h3 {
+  font-size: 16px;
+  margin: 10px 0 0;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ff9800;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.badge.green { background: #4caf50; }
+.badge.blue { background: #2196f3; }
+.badge.orange { background: #ff9800; }
+.badge.purple { background: #9c27b0; }
+
+</style>
+  <header>
+    <h1>Our Insurance Services</h1>
+    <p>Select a service to learn more</p>
+  </header>
+<div class="col-sm-6 col-lg-3">
+  <div class="card shadow-sm border-0 h-100 p-4 service-card text-center position-relative">
+    <span class="badge green">Lowest Price</span>
+    <i class="bi bi-shield-check fs-1 text-primary"></i>
+    <h5 class="mt-3 fw-bold">Term Life Insurance</h5>
+    <p class="text-muted small">Secure your family’s future with affordable term plans.</p>
+    <button class="btn btn-outline-primary btn-sm mt-2" 
+            data-bs-toggle="collapse" data-bs-target="#termOptions" 
+            aria-expanded="false" aria-controls="termOptions">
+      View More
+    </button>
+    <div class="collapse mt-3 text-start" id="termOptions">
+      <ul class="list-unstyled small">
+        <li><a href="#">Life Insurance</a></li>
+        <li><a href="#">List of Term Insurance Plans</a></li>
+        <li><a href="#">Term Insurance for NRI</a></li>
+        <li><a href="#">1 Crore Term Insurance</a></li>
+        <li><a href="#">Term Insurance Calculator</a></li>
+        <li><a href="#">Dedicated Claim Assistance</a></li>
+        <li><a href="#">Term Insurance for Women</a></li>
+        <li><a href="#">Term Insurance for HNI</a></li>
+        <li><a href="#">Return of Premium</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="col-sm-6 col-lg-3">
+  <div class="card shadow-sm border-0 h-100 p-4 service-card text-center position-relative">
+    <span class="badge-offer">Lowest Price</span>
+    <i class="bi bi-shield-check text-primary fs-1"></i>
+    <h5 class="mt-3 fw-bold">Term Life Insurance</h5>
+    <p class="text-muted small">Secure your family’s future with affordable term plans.</p>
+
+    <!-- Toggle Button -->
+    <button class="btn btn-outline-primary btn-sm mt-2 w-100 fw-bold" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#termLifeOptions"
+            aria-expanded="false" 
+            aria-controls="termLifeOptions">
+      View More
+    </button>
+
+    <!-- Collapsible Section -->
+    <div class="collapse mt-3 text-start" id="termLifeOptions">
+      <ul class="list-group list-group-flush small">
+        <li class="list-group-item"><a href="#">Life Insurance</a></li>
+        <li class="list-group-item"><a href="#">List of Term Insurance Plans</a></li>
+        <li class="list-group-item"><a href="#">Term Insurance for NRI</a></li>
+        <li class="list-group-item"><a href="#">1 Crore Term Insurance</a></li>
+        <li class="list-group-item"><a href="#">Term Insurance Calculator</a></li>
+        <li class="list-group-item"><a href="#">Dedicated Claim Assistance</a></li>
+        <li class="list-group-item"><a href="#">Term Insurance for Women</a></li>
+        <li class="list-group-item"><a href="#">Term Insurance for HNI</a></li>
+        <li class="list-group-item"><a href="#">Return of Premium</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  <section class="services-grid">
+    <a href="#" class="service-card">
+      <span class="badge green">Lowest Price</span>
+    <i class="bi bi-shield-check fs-1 text-primary"></i>
+      <h3>Term Life Insurance</h3>
+    <button class="btn btn-outline-primary btn-sm mt-2 w-100 fw-bold" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#termLifeOptions"
+            aria-expanded="false" 
+            aria-controls="termLifeOptions">
+      View More
+    </button>
+    <div class="collapse mt-3 text-start" id="termLifeOptions">
+      <ul class="list-group list-group-flush small">
+        <li class="list-group-item"><a href="#">Life Insurance</a></li>
+        <li class="list-group-item"><a href="#">List of Term Insurance Plans</a></li>
+        <li class="list-group-item"><a href="#">Term Insurance for NRI</a></li>
+        <li class="list-group-item"><a href="#">1 Crore Term Insurance</a></li>
+        <li class="list-group-item"><a href="#">Term Insurance Calculator</a></li>
+        <li class="list-group-item"><a href="#">Dedicated Claim Assistance</a></li>
+        <li class="list-group-item"><a href="#">Term Insurance for Women</a></li>
+        <li class="list-group-item"><a href="#">Term Insurance for HNI</a></li>
+        <li class="list-group-item"><a href="#">Return of Premium</a></li>
+      </ul>
+    </div>
+</a>
+    <a href="#" class="service-card">
+      <span class="badge blue">0% GST</span>
+      <i class="bi bi-heart-pulse fs-1 text-danger"></i>
+      <h3>Health Insurance</h3>
+    </a>
+
+    <a href="#" class="service-card">
+      <span class="badge orange">In-Built Life Cover</span>
+       <i class="bi bi-cash-stack fs-1 text-warning"></i>
+      <h3>Investment Plans</h3>
+    </a>
+
+    <a href="#" class="service-card">
+      <span class="badge purple">Up to 91% Off</span>
+      <i class="bi bi-car-front fs-1 text-success"></i>
+      <h3>Car Insurance</h3>
+    </a>
+
+    <a href="#" class="service-card">
+      <span class="badge green">Up to 85% Off</span>
+      <i class="bi bi-bicycle fs-1 text-info"></i>
+      <h3>2 Wheeler Insurance</h3>
+    </a>
+
+    <a href="#" class="service-card">
+      <span class="badge blue">Up to 25% Off</span>
+      <i class="bi bi-people fs-1 text-primary"></i>
+      <h3>Family Health Insurance</h3>
+    </a>
+
+    <a href="#" class="service-card">
+      <span class="badge orange">Save More</span>
+   <i class="bi bi-airplane-engines fs-1 text-warning"></i>
+      <h3>Travel Insurance</h3>
+    </a>
+
+    <a href="#" class="service-card">
+      <span class="badge green">Up to 25% Off</span>
+      <i class="bi bi-house-door fs-1 text-success"></i>
+      <h3>Home Insurance</h3>
+    </a>
+  </section>
+
+{% endblock %}

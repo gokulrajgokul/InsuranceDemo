@@ -9,8 +9,8 @@ def frontpage(request):
 def home(request):
     return render(request,'home.html')
 
-def plants(request):
-    return render(request,'plants.html')
+def services(request):
+    return render(request,'services.html')
 
 def plant(request):
     return render(request,'plant.html')
