@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login,logout
 from django.contrib import messages
+from .models import UserData
 
 def frontpage(request):
     return render(request,'frontpage.html')
@@ -89,3 +90,24 @@ def register(request):
         return redirect('signin')
 
     return render(request,'register.html')
+
+def userdata(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')   # small "n" because form field is "name"
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        address = request.POST.get('address')
+
+        # Save to DB
+        user = UserData.objects.create(
+            name=name,
+            email=email,
+            phone=phone,
+            address=address
+        )
+        user.save()
+
+        messages.success(request, "✅ Your details have been submitted successfully!")
+        return redirect('home')
+
+    return render(request, 'userdata.html')
