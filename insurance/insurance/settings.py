@@ -25,6 +25,8 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'  # python manage.py collectstatic
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+import sys, os
+sys.path.append(os.path.join(BASE_DIR, 'insurance'))
 
 
 # Application definition
@@ -36,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'insuranceapp',
+    'insuranceapp', 
+    'insurance.insuranceapp',
 ]
 
 MIDDLEWARE = [
